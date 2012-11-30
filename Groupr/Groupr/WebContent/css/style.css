@@ -1,0 +1,525 @@
+/**
+* MISC
+*/
+img {
+	border:none;
+	outline:none;
+}
+.center{
+	text-align: center;
+	margin-top: 40px;
+}
+a {
+	color: #00adff;
+	text-decoration: none;
+}
+a:hover{
+	color: #333;
+	text-decoration: underline;
+}
+a:focus {
+	border: 1px dotted #ddd;
+}
+h1,h2,h3,h4,h5{
+	font-weight: 900;
+}
+}
+h2{
+	font-size: 2.5em;
+}
+h3{
+	font-size: 2em;
+}
+h4{
+	font-size: 1.5em;
+}
+/* My clearfix */
+.clearfix {
+	overflow: hidden;
+	zoom:1;
+	content: "";
+	display: block;
+	clear: both;
+}
+#error,#success{
+	font-size:1.5em;
+	color:#F02311;
+	text-align:center
+}
+#success{color:#77CCA4;}
+.sep, .subSep {
+	width: 700px;
+	margin-left: 50px;
+	min-height: 1px;
+	display: block;
+	background: #ddd;
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+.subSep {
+	margin-left: 30px;
+}
+/* Epic cursive font */
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Satisfy'), url('http://themes.googleusercontent.com/static/fonts/satisfy/v2/tmRzDlQs5wZmOn9mIuLa-QLUuEpTyoUstqEm5AMlJo4.woff') format('woff');
+}
+/* html5 shit */
+header,section,aside,nav,article,footer{
+	display: block;
+}
+
+
+/**
+* Main
+*/
+
+/* dime body */
+body {
+	font-size: 62.5%; /* so 1em = 10px */
+	font-family:  Helvetica, sans-serif;
+	background: #f4f5f6 url('../img/light_alu.png') repeat;
+	width: 100%;
+	padding: 0; margin: 0; /* remove random space at the top and sides of the page on shit browsers */
+}
+
+#container {
+	z-index: 2;
+	position: relative;
+	font-size: 1.2em;
+	width: 800px;
+	margin: 15px auto;
+	padding: 15px;
+	background: #fff;
+	border: 1px solid #eee;
+	box-shadow: 1px 2px 2px #AAA, 0 4px 2px #999, -2px 2px 2px #aaa;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+
+/* Header */
+#status {
+	float: right;
+	display: block;
+	margin: 10px 5px 0 0;
+}
+#status a {
+	margin: 1px 1px 0 5px;
+}
+h1 {
+	font-family: 'Satisfy', cursive;
+	font-size: 6em;
+	color: #00adf0;
+	text-align: center;
+	margin: 0 0 20px 70px;
+	text-shadow: 1px 4px 6px #ddd, 0 0 0 #eee, 1px 4px 6px #ddd;
+	
+}
+
+
+/* Menu */
+nav {
+	margin: 10px 0;
+	width: 100%;
+	text-align: center;
+}
+nav h3{
+	font-family: 'Satisfy', cursive;
+	text-indent: 10px;
+}
+nav a {
+	text-align: center;
+}
+nav a:hover{
+	text-decoration: none;
+}
+
+
+/* Content */
+#content{
+	display: none;
+}
+#profileView{
+	display: none;
+	padding:1em 4em;
+}
+#profileView table {
+	margin:0 auto;
+}
+#groupView, #inviteView, #leaveGroupView, #myGroupView {
+	font-size: 1.2em;
+	margin-top: 10px;
+	display: none;
+}
+#inviteView a {
+	vertical-align:top;
+}
+#inviteView p {
+	text-align:center;
+}
+#GroupViewFiller, #InviteViewFiller, #memberListFiller{
+	margin-top:1em;
+	text-align:center;
+}
+#groupView h4 {
+	text-align: center;
+}
+#myGroupView{
+	padding: 10px 20px;
+}
+#membersTitle{
+	padding-left: 60px;
+}
+#myGroupInfo{
+	padding: 0 60px;
+}
+#myGroupInfo h4 {
+	margin: 10px 0;
+}
+#editGroupBtn {
+	float: right;
+	margin: 10px;
+}
+#leaveGroupView{
+	text-align: center;
+}
+
+
+/* Footer */
+footer {
+	font-size: 1em;
+	margin: 25px 5px 5px;
+	text-align: right;
+}
+
+/**
+* Pagination
+*/
+.pagination {
+	text-align: center;
+	margin: 8px;
+}
+.pagination a {
+	display: inline-block;
+	width: 19px;
+	color: #555;
+}
+.pagination a.currentPage{
+	background: #888;
+	color: #fff;
+}
+
+
+/**
+* Overlay
+*/
+#overlay {
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	background:  rgba(127, 127, 127, 0.5);
+	background: -webkit-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));
+	background: -moz-radial-gradient(rgba(127, 127, 127, 0.5), rgba(127, 127, 127, 0.5) 35%, rgba(0, 0, 0, 0.7));
+	-webkit-transition: 0.5s opacity;
+	-moz-transition: 0.5s opacity
+}
+#overlayBox{
+	width: 500px;
+	margin: 100px auto 0 auto;
+	background: #fff;
+	border: 2px solid #BCC1D0;
+	box-shadow: 0px 5px 80px #505050;
+	-moz-box-shadow: 0px 5px 80px #505050;
+	-webkit-box-shadow: 0px 5px 80px #505050;
+}
+#closeOverlay{
+	float: right;
+	padding: 10px 10px 0 0;
+}
+#overlayBox h3{
+	padding: 15px;
+	background: -webkit-linear-gradient(white, #F8F8F8);
+	background: -moz-linear-gradient(white, #F8F8F8);
+	border-bottom: 1px solid rgba(188, 193, 208, .5);
+	padding: 10px 15px 8px 15px;
+	font-size: 1.2em;
+	text-shaodw: white 0 1px 2px;
+	color: #53637D;
+}
+#overlayBox label {
+	padding-left: 15px;
+	font-size: 1.1em;
+	width: 90px;
+	display: inline-block;
+}
+#overlayBox input {
+	width: 250px;
+	display: inline-block;
+}
+#sendInvite, /*#editGroupInfo*/ {
+	display: none;
+}
+
+/**
+* Nice Buttons 
+*/
+.button {        
+        display: inline-block;
+        white-space: nowrap;
+        background-color: #ccc;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ccc));
+        background-image: -webkit-linear-gradient(top, #eee, #ccc);
+        background-image: -moz-linear-gradient(top, #eee, #ccc);
+        background-image: -ms-linear-gradient(top, #eee, #ccc);
+        background-image: -o-linear-gradient(top, #eee, #ccc);
+        background-image: linear-gradient(top, #eee, #ccc);
+        border: 1px solid #777;
+        padding: 0 1.5em;
+        margin: 0.5em;
+        font: bold 1.5em/2.5em Arial, Helvetica;
+        text-decoration: none;
+        color: #333;
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+        -moz-border-radius: .2em;
+        -webkit-border-radius: .2em;
+        border-radius: .2em;
+        -moz-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+        box-shadow: 0 0 1px 1px rgba(255,255,255,.8) inset, 0 1px 0 rgba(0,0,0,.3);
+}  
+.button:hover {
+    	cursor:pointer;
+        background-color: #ddd;        
+        background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
+        background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
+        background-image: -moz-linear-gradient(top, #fafafa, #ddd);
+        background-image: -ms-linear-gradient(top, #fafafa, #ddd);
+        background-image: -o-linear-gradient(top, #fafafa, #ddd);
+        background-image: linear-gradient(top, #fafafa, #ddd); 
+}   
+.button:active {
+        -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
+        position: relative;
+        top: 1px;
+}
+.button:focus {
+        outline: 0;
+        background: #fafafa;
+}    
+.button:before {
+        background: #ccc;
+        background: rgba(0,0,0,.1);
+        float: left;        
+        width: 1em;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0 1em 0 -1em;
+        padding: 0 .2em;
+        -moz-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+        -webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+        box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
+        -moz-border-radius: .15em 0 0 .15em;
+        -webkit-border-radius: .15em 0 0 .15em;
+        border-radius: .15em 0 0 .15em;        
+}
+
+
+/**
+* Tooltips
+*/
+.tipsy{
+	padding:5px;
+	font-size:12px;
+	opacity:.7;
+	filter:alpha(opacity=70);
+	-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
+	background-repeat:no-repeat;
+	background-color: #000;
+	background-image:url(../img/tipsy.gif);
+}
+.tipsy-inner{
+	padding:5px 8px 4px 8px;
+	background-color:black;
+	color:white;
+	max-width:200px;text-align:center;
+}
+.tipsy-north{background-position:top center;}
+
+
+/**
+* Nice tables 
+*/
+table {
+	margin-left: 50px;
+	font:12px/15px "Helvetica Neue",Arial, Helvetica, sans-serif;
+	overflow:hidden;
+	border:1px solid #d3d3d3;
+	background:#fefefe;
+	width:650px;
+	margin:5% auto 0;
+	-moz-border-radius:5px; /* FF1+ */
+	-webkit-border-radius:5px; /* Saf3-4 */
+	border-radius:5px;
+	-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+th,tr,td{
+	margin: 0;padding: 0; line-height: 1;border: 0;outline: 0;vertical-align: baseline;
+}
+th, td {padding:18px 28px 18px; text-align:center; }
+th {padding-top:22px; text-shadow: 1px 1px 1px #fff; background:#e8eaeb;}
+td {border-top:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+tr.odd-row td {background:#f6f6f6;}
+td.first, th.first {text-align:left}
+td.last {border-right:none;}
+
+/* bg */
+td {
+	background: -moz-linear-gradient(100% 25% 90deg, #fefefe, #f9f9f9);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f9f9f9), to(#fefefe));
+}
+
+tr.odd-row td {
+	background: -moz-linear-gradient(100% 25% 90deg, #f6f6f6, #f1f1f1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 25%, from(#f1f1f1), to(#f6f6f6));
+}
+
+th {
+	background: -moz-linear-gradient(100% 20% 90deg, #e8eaeb, #ededed);
+	background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#e8eaeb));
+}
+
+/* corners */
+tr:first-child th.first {
+	-moz-border-radius-topleft:5px;
+	-webkit-border-top-left-radius:5px; 
+}
+
+tr:first-child th.last {
+	-moz-border-radius-topright:5px;
+	-webkit-border-top-right-radius:5px;
+}
+
+tr:last-child td.first {
+	-moz-border-radius-bottomleft:5px;
+	-webkit-border-bottom-left-radius:5px;
+}
+
+tr:last-child td.last {
+	-moz-border-radius-bottomright:5px;
+	-webkit-border-bottom-right-radius:5px;
+}
+.gName{
+	min-width: 70px;
+}
+.gDesc{
+	min-width: 200px;
+}
+.gPic img{
+	display: inline;
+	vertical-align: top;
+	width: 30px;height: 30px;
+}
+
+/**
+* Login
+*/
+/* Login Page */
+#loginLeft, #loginRight {
+        margin:0;
+    	padding:0;
+    	position:absolute;
+		width:50%;/* should be 50% */
+    	height:100%;
+    	display:block;
+		z-index:8;
+}
+#loginLeft {
+	background:#101521 url(http://i.imgur.com/T1apw.png) right top no-repeat; 
+}
+#loginRight {
+    	left:50%;
+    	background:#101521 url(http://i.imgur.com/OsTSC.png) left top no-repeat;
+}
+
+#loginBox{
+	position:absolute;
+    	top:50%;
+    	margin:-150px 0 0 -130px;
+    	width:260px;
+    	height:150px;
+		z-index:9;
+	
+}
+/* Rips on page split */
+#leftRip, #rightRip { 
+	width:30px;height:100%;
+    	position:absolute;
+    	z-index:-1;
+		display:none;
+}
+#leftRip{
+	left:100%;
+	background:url(http://i.imgur.com/HSYlY.png) top right repeat-y;
+}
+#rightRip {
+    	right:100%;
+	background: url(http://i.imgur.com/SkRJG.png) top left repeat-y;
+}
+/* Form */
+#loginHd {
+	border-top-left-radius:5px;
+    	border-top-right-radius:5px;
+    	margin:0;
+    	padding:5px;
+    	font-size:1.4em;
+    	background-image: -webkit-gradient(linear, left top, left bottom, from(#3C424D), to(#242A35));
+        background-image: -webkit-linear-gradient(top, #3C424D, #242A35);
+        background-image: -moz-linear-gradient(top, #3C424D, #242A35);
+        background-image: -ms-linear-gradient(top, #3C424D, #242A35);
+        background-image: -o-linear-gradient(top, #3C424D, #242A35);
+        background-image: linear-gradient(top, #3C424D, #242A35);
+    	box-shadow:0 1px 1px rgba(255, 255, 255, 0.2) inset;
+}
+#loginHd h4 {margin:2px 5px;color:#fff;}
+#loginForm {
+	background:#efefef;
+    	border-bottom-left-radius:5px;
+    	border-bottom-right-radius:5px;
+}
+
+#loginBtn { 
+	margin-left:80px;
+}
+
+#loginBox a {
+    	font-size:1.3em;
+    	line-height:1.5em;
+    	margin-left:8px;
+}
+
+/* Nice Inputs */
+#loginForm input[type=text], #loginBox input[type=password] {
+    	border:1px solid #929292;
+    	-moz-border-radius:5px;
+    	-webkit-border-radius:5px;
+      	border-radius:5px;
+	width:230px;
+    	height:26px;
+    	font-size:1.6em;
+	padding:3px;
+        margin:10px;
+	margin-bottom:10px;
+}
